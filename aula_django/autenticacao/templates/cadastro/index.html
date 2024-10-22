@@ -1,1 +1,29 @@
-{{pessoa.0.nome}}
+{% comment %}
+
+{% for i in pessoas %}
+<h1>{{ i }}</h1>
+{% endfor %}
+
+{% endcomment %}
+
+
+{% comment %}
+{% for i  in pessoas %}
+<h1>Nome: {{i.nome}}</h1>
+<h1>Idade: {{i.idade}}</h1>
+<h1>Profisao: {{i.profissao}}</h1>
+<hr>
+{% endfor %}
+{% endcomment %}
+
+
+
+{% if x == 0  %}
+{% for i in pessoas %}
+h1>Nome: {{i.nome}}</h1>
+<h1>Idade: {{i.idade}}</h1>
+<h1>Profisao: {{i.profissao}}</h1>
+<hr>
+    {% endfor  %}
+
+{% endif %}

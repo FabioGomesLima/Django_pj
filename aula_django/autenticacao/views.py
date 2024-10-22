@@ -14,5 +14,6 @@ def cadastro(request):
             ]
     
     
-    return render(request, 'cadastro/index.html', { 'pessoa':pessoa
-                                                             })
+    return render(request, 'cadastro/index.html',{ 'pessoas':pessoa,
+                                                       'x': 0 
+                                                              })
