@@ -1,29 +1,4 @@
-{% comment %}
-
-{% for i in pessoas %}
-<h1>{{ i }}</h1>
-{% endfor %}
-
-{% endcomment %}
-
-
-{% comment %}
-{% for i  in pessoas %}
-<h1>Nome: {{i.nome}}</h1>
-<h1>Idade: {{i.idade}}</h1>
-<h1>Profisao: {{i.profissao}}</h1>
-<hr>
-{% endfor %}
-{% endcomment %}
-
-
-
-{% if x == 0  %}
-{% for i in pessoas %}
-h1>Nome: {{i.nome}}</h1>
-<h1>Idade: {{i.idade}}</h1>
-<h1>Profisao: {{i.profissao}}</h1>
-<hr>
-    {% endfor  %}
-
-{% endif %}
+{% load static %}
+<link rel="stylesheet" href="{%static 'css/css.css'%}">
+<h1>olá</h1>
+<img src="/static/img/img_teste.png">
