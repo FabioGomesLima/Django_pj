@@ -14,7 +14,7 @@
 
 {% block 'conteudo'%}
 
-<form action="{%url 'valida_formulario'%}" method="GET"> {% csrf_token %}  
+<form action="{%url 'valida_formulario'%}" method="POST"> {% csrf_token %}  
       <input type="text" placeholder="Nome..." name="nome">
       <input type="email" placeholder="Email..." name="email">
       <input type="submit">
