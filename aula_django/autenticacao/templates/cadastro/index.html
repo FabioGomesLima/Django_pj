@@ -14,13 +14,11 @@
 
 {% block 'conteudo'%}
 
-{% if erro == '1' %}
-    <div class="alert alert-danger" role="alert">
-      Email inválido
-     </div
-{%endif%}
+<form action="{%url 'valida_formulario'%}" method="GET"> {% csrf_token %}  
+      <input type="text" placeholder="Nome..." name="nome">
+      <input type="email" placeholder="Email..." name="email">
+      <input type="submit">
+</form>
 
-<h1>olá</h1>
-<img src="/static/img/img_teste.png">
 
 {% endblock %}
