@@ -14,10 +14,13 @@
 
 {% block 'conteudo'%}
 
+{% if erro == '1' %}
+    <div class="alert alert-danger" role="alert">
+      Email inválido
+     </div
+{%endif%}
+
 <h1>olá</h1>
-<h1>{{nome}}</h1>
-<h1>{{sobrenome}}</h1>
-<h1>{{idade}}</h1>
 <img src="/static/img/img_teste.png">
 
 {% endblock %}
