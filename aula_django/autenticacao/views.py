@@ -19,4 +19,8 @@ def cadastro(request):
 
         pessoa.save()  # Salva a instância no banco de dados
         return HttpResponse('Você foi cadastrado')
-
+    
+def listar(request):
+    pessoas = Pessoa.objects.all()
+    print(pessoas)
+    return render(request, 'listar/listar.html', { 'pessoas':pessoas})
