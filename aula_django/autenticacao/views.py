@@ -22,6 +22,6 @@ def cadastro(request):
         return HttpResponse('Você foi cadastrado')
     
 def listar(request):
-    pessoas = Pessoa.objects.filter( nome = 'fabio').filter(Q(senha = 'fb12345') | Q (senha = '12345')) #outro forma usando o operador or
+    pessoas = Pessoa.objects.filter( nome = 'fabio').filter(Q(senha = 'fb12345') | Q (senha = '12345')).exclude(senha = 'fb12345')
     print(pessoas)
     return render(request, 'listar/listar.html', { 'pessoas':pessoas})
