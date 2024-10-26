@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 import json
 from .models import Pessoa
+from django.db.models import Q #import para o operador or
 
 def cadastro(request):
     if request.method == "GET":
@@ -21,6 +22,6 @@ def cadastro(request):
         return HttpResponse('Você foi cadastrado')
     
 def listar(request):
-    pessoas = Pessoa.objects.filter( nome = 'fabio').filter(senha = 'fb12345') | Pessoa.objects.filter(senha = '1234') #operador or
+    pessoas = Pessoa.objects.filter( nome = 'fabio').filter(Q(senha = 'fb12345') | Q (senha = '12345')) #outro forma usando o operador or
     print(pessoas)
     return render(request, 'listar/listar.html', { 'pessoas':pessoas})
